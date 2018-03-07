@@ -1,7 +1,8 @@
 sudo: required
 dist: trusty
 before_install:
-- sudo apt-get install texlive-xetex
+- sudo apt-get install texlive-xetex -y
+- sudo apt-get install texlive-latex-extra -y
 script:
 - mkdir _build
 - xelatex --interaction=nonstopmode --halt-on-error --jobname=cv cv_12.tex
