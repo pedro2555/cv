@@ -16,7 +16,6 @@ deploy:
   skip_cleanup: true
   on:
     branch: en
-deploy:
   provider: releases
   api_key: $GH_TOKEN
   file: pt-PT.pdf
