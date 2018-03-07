@@ -3,8 +3,8 @@ dist: trusty
 before_install:
 - sudo apt-get install texlive-xetex -y
 - sudo apt-get install texlive-latex-extra -y
+- sudo apt-get install texlive-fonts-recommended -y
 script:
-- mkdir _build
 - xelatex --interaction=nonstopmode --halt-on-error --jobname=cv cv_12.tex
 before_deploy:
   - cp cv.pdf en-GB.pdf
