@@ -1,0 +1,28 @@
+sudo: required
+dist: trusty
+before_install:
+- sudo apt-get install texlive-xetex
+script:
+- mkdir _build
+- xelatex --interaction=nonstopmode --halt-on-error --jobname=cv cv_12.tex
+before_deploy:
+  - cp cv.pdf en-GB.pdf
+  - cp cv.pdf pt-PT.pdf
+deploy:
+  provider: releases
+  api_key:
+    secure: $GH_TOKEN
+  file:
+  - en-GB.pdf
+  skip_cleanup: true
+  on:
+    branch: en
+deploy:
+  provider: releases
+  api_key:
+    secure: $GH_TOKEN
+  file:
+  - pt-PT.pdf
+  skip_cleanup: true
+  on:
+    branch: pt
