@@ -8,11 +8,10 @@ script:
 - xelatex --interaction=nonstopmode --halt-on-error --jobname=cv cv_12.tex
 before_deploy:
   - cp cv.pdf en-GB.pdf
-  - cp cv.pdf pt-PT.pdf
 deploy:
   provider: releases
   api_key: $GH_TOKEN
-  file: pt-PT.pdf
+  file: en-GB.pdf
   skip_cleanup: true
   on:
-    branch: pt
+    branch: en
