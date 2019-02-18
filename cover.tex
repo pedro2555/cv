@@ -1,0 +1,92 @@
+\documentclass{letter}
+
+\usepackage[margin=1in]{geometry}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\makeatletter
+\def\ps@plain{%
+\let\@oddfoot\@empty
+\def\@oddhead{\fromname{}
+\hfil \fromaddress{} \fromlocation{}
+\hfil \telephonenum{}}%
+\let\@evenfoot\@empty
+\let\@evenhead\@oddhead}
+\makeatother
+\pagestyle{plain}
+
+\renewcommand*{\opening}[1]{\vspace{2\parskip}%
+#1 \toname,\hfill\today\par\nobreak
+}
+\renewcommand*{\closing}[1]{\par\nobreak\vspace{\parskip}%
+\vspace{2\parskip}%
+#1\\[6\medskipamount]%
+\fromsig
+}
+
+\name{Pedro Rodrigues}
+\signature{Pedro Rodrigues}
+\address{Rua Lopes Mendonça nº12 6ºdto}
+\location{Almada, Portugal}
+\telephone{prodrigues1990@gmail.com}
+
+\begin{document}
+\begin{letter}{}
+
+\textbf{AVL Emission Test Systems GmbH}\\
+Graf-Landsberg-Strasse 1C\\
+41460 Neuss\\
+Germany\\
+
+\textbf{Application for Information Technology Technician}
+
+\opening{Dear}
+
+I was made aware of your requirements for a technician skilled in computer science by my friend,
+and your employee, Rafael Abreu Marques. Delighted to known such requirements, having a valuable
+set of skills in the computer science field, and actively looking to move abroad, my name is Pedro
+Rodrigues and with determination and confidence in delivering, I would like to spontaneously offer
+my expertise to fulfill such requirements.
+
+I've finished my school years in a proffessional course in management and programming of
+information systems, where I've develop crucial skills and concepts in, computer languages mainly
+focused in C\#.NET, database systems such as SQL, and computer networks principles and application
+in Microsoft's solutions. Which was just the culmination of beeing fascinated with computers since
+very early age.
+
+During the final stages of the course, I've had been gathering know how in the various entreprise
+used solutions, helping in management of a small datacenter, client VPN networks, and beeing part
+from the beginning to product release of the largest Portuguese feed bank website. At Variograma,
+I've also learned valuable team work knowledge and tools such software version control, and linux
+operating systems, during a 6 month internship program.
+
+By the end of the course I was confident in my capabilities, I was looking for an opportunity, and
+discovered the vast world of open source software during the free time, where I started to
+contribute. Culminating with the release of an extremely popular computer game addon written in C\#
+as open source.
+
+Still looking to improvement my qualities, I've enrolled in a technical course at PHC Portugal, a
+software house and key player in Entreprise Resource Planning (ERP) software for the portuguese
+market, focused on configuration of their ERP software, and heavily targetting extensibility with
+custom designed procedures within. A key skillset to narrow my focus.
+
+Applying all learned before, and with increased responsibility, I joined a team of 5 managers
+
+Determined to make a difference, given the responsibility to reform their IT department and
+accomodate PHC's ERP software into their existing processes, Casacon, an established construction
+material reseller in Angola, allowed me the opportunity to move to Africa. Working and living with
+a dedicated team for more than 2 years, I was able to fully apply and gain profound knowledge in
+entreprise networks. Applying the concepts learned before, at a larger scale, and
+with even greater responsibility. I've learned  with actual hardware providers for network and datacenter
+enviroments such as DELL, Cisco, Juniper, and HP, as well as key software providers such as VMWare
+and the, at time emerging, virtualization technologies.
+
+In little over two years with Casacon, we've accomplished more than proposed and I was looking for
+new opportunies. The workforce required for a reform in the IT department was no longer justified,
+in a stable department with little day to day activities and it was decided to relief two
+technicians working under my supervision, and pass my responsibilities to a subcontracter as my
+proposal.
+
+\closing{Your sincerely.}
+\end{letter}
+\end{document}
