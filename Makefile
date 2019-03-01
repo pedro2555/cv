@@ -7,4 +7,4 @@ pt-PT.pdf: src_pt.tex
 	xelatex --jobname=pt-PT src_pt.tex
 
 clean:
-	rm -f *.pdf *.aux *.log *.out
+	rm -f *.pdf *.aux *.log *.out *.dvi
