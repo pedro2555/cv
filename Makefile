@@ -10,4 +10,4 @@ cover.pdf: cover.tex
 	pdflatex cover.tex
 
 clean:
-	rm -f *.pdf *.aux *.log *.out
+	rm -f *.pdf *.aux *.log *.out *.dvi
