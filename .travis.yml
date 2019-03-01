@@ -5,17 +5,13 @@ before_install:
 - sudo apt-get install texlive-latex-extra -y
 - sudo apt-get install texlive-fonts-recommended -y
 script:
-- xelatex --interaction=nonstopmode --halt-on-error --jobname=en src_en.tex
-- xelatex --interaction=nonstopmode --halt-on-error --jobname=pt src_pt.tex
-before_deploy:
-  - cp en.pdf en-GB.pdf
-  - cp pt.pdf pt-PT.pdf
+- make
 deploy:
   provider: releases
   api_key: $GH_TOKEN
+  file_glob: true
   file:
-  - en-GB.pdf
-  - pt-PT.pdf
+  - *.pdf
   skip_cleanup: true
   on:
     branch: master
