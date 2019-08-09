@@ -1,10 +1,17 @@
-cv: en-GB.pdf pt-PT.pdf
+.PHONY: en pt all clean clean.all
 
-en-GB.pdf: src_en.tex
-	xelatex --jobname=en-GB src_en.tex
+all: en pt
 
-pt-PT.pdf: src_pt.tex
-	xelatex --jobname=pt-PT src_pt.tex
+en: src_en.tex
+	latexmk -pdf -xelatex --jobname=en-GB -use-make src_en.tex
+
+pt: src_pt.tex
+	latexmk -pdf -xelatex --jobname=pt-GB -use-make src_pt.tex
 
 clean:
-	rm -f *.pdf *.aux *.log *.out *.dvi
+	latexmk -c
+	rm -f *.aux *.log *.out *.dvi *.fdb_latexmk *.fls
+
+clean.all:
+	latexmk -CA
+	rm -f *.pdf *.aux *.log *.out *.dvi *.fdb_latexmk *.fls
