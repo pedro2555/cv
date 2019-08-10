@@ -6,7 +6,7 @@ en: src_en.tex
 	latexmk -pdf -xelatex --jobname=en-GB -use-make src_en.tex
 
 pt: src_pt.tex
-	latexmk -pdf -xelatex --jobname=pt-GB -use-make src_pt.tex
+	latexmk -pdf -xelatex --jobname=pt-PT -use-make src_pt.tex
 
 clean:
 	latexmk -c
